@@ -1,0 +1,2 @@
+# Simpan semua file teks dengan line ending LF agar konsisten di Windows/Mac/Linux.
+* text=auto eol=lf

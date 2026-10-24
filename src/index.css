@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    @apply bg-cream font-sans text-ink antialiased;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+}
+
+@layer components {
+  /* Kontainer halaman: konten maks. 1200px + gutter responsif. */
+  .container-page {
+    @apply mx-auto w-full max-w-[1264px] px-5 sm:px-8;
+  }
+}
+
+@layer utilities {
+  /* Sembunyikan scrollbar pada daftar yang bisa digeser horizontal (tab kategori di HP). */
+  .scrollbar-none {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+}
